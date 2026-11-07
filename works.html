@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>勤怠報告管理システム - MASAKAZU SASAKI's PORTFOLIO</title>
+    <link rel="icon" href="img/M.png">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/works-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/works.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="menu-frame">
+            <button
+                type="button"
+                class="c-menuButton"
+                aria-label="メニューを開く"
+                aria-controls="globalMenu"
+                aria-expanded="false"
+            >
+                <span class="c-menuButton__line"></span>
+                <span class="c-menuButton__line"></span>
+                <span class="c-menuButton__line"></span>
+            </button>
+        </div>
+        
+        <div  id="globalMenu" class="c-globalMenu menu-set" aria-hidden="true">
+            <nav class="menu c-globalMenu__list">
+                <ul class="sec-list">
+                    <li><a href="index.html">Top</a></li>
+                    <li><a href="index.html#works">Works</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="c-overlay">
+            <button
+                type="button"
+                aria-label="メニューを閉じる"
+                tabindex="-1"
+            ></button>
+        </div>
+        <button class="item-img" onclick="location.href='https://attendance-manager-ud3c.onrender.com/admin/login' ">
+            <video src="img/attendance_manager.mp4" autoplay playsinline muted loop></video>
+            <h1 class="fadein">勤怠報告管理システム</h1>
+        </button>
+    </header>
+    <main>
+        <button class="top-botton" onclick="location.href='#' "><div class="polygon"></div></button>
+        <section id="works" class="fadein">
+            <div class="title-set"> 
+                <h2>概要</h2>
+                <div class="line"></div>
+            </div>
+            <div class="frame">
+                <div class="tool">
+                    <ul>
+                        <li>言語：PHP、HTML、CSS、Javascript</li>
+                        <li>フレームワーク：Laravel</li>
+                        <li>ホスティング：Render</li>
+                        <li>DB:PostgreSQL</li>
+                    </ul>
+                </div>
+                <p>
+                    本アプリケーションは、就労支援施設向けの「業務報告・勤務状況管理システム」です。施設利用者が日々行う出退勤時の業務報告を一元管理し、
+                    スタッフの管理業務を効率化するために開発しました。
+                </p>
+
+                <h3>製作範囲</h3>
+                <p>設計、開発</p>
+                <h3 class="button-flg">開発の背景</h3>
+                <p>
+                    元々は、バーチャルオフィス（MetaLife）のチャット上の業務報告を、スタッフが毎日手書きでExcelに転記しており、大きな作業負荷となっていました。
+                    当時、事業所内で唯一プログラミングができた私に「システムを作ってほしい」と依頼があり、生PHPでの開発をスタートしました。<br><br>
+
+                    しかし、社内にセキュリティ面に詳しい有識者がおらず、また予算の確保も難しかったことから、安全な運用を担保することが困難と判断され、
+                    事業所としての開発は途中で中止となりました。<br><br>
+
+                    ですが、このWebアプリケーションでの課題解決が楽しかったのでより高度なものを作りたいと思い、ソースコードをポートフォリオとして譲り受けました。
+                    社内で懸念されていたセキュリティや保守性の課題をクリアするため、Webフレームワーク（Laravel）を導入し、システムをモダンに再構築して完成させました。
+                </p>
+                <h3>想定されるユースケース</h3>
+                <p>
+                    本システムは、主に以下の2つの目的でスタッフに利用されることを想定しています。<br><br>
+
+                    1. 施設利用者の適切な評価・面談への活用<br>
+                    日々の具体的な業務内容や報告内容をシステム上でいつでも振り返ることができるため、利用者の能力評価や定期面談のフィードバックに活用します。<br><br>
+                    2. 勤怠データの裏付け<br>
+                    別の勤怠アプリケーションで利用者が「出勤・退勤ボタン」を押し忘れてしまった際、本システムに「その日の業務報告」が正しく残っているかを確認することで、
+                    実際に勤務していたかどうかの確実な裏付け（エビデンス）として利用します。
+                </p>
+                <h3>機能一覧</h3>
+                <ul class="function-list">
+                    <li>全画面機能</li>
+                    <ul>
+                        <li>マルチログイン機能</li>
+                        <li>パスワード変更機能</li>
+                    </ul>
+                    <li>管理者画面機能</li>
+                    <ul>
+                        <li>業務報告管理</li>
+                        <ul>
+                            <li>業務報告一覧の閲覧・詳細検索（日付、月、利用者ID、シフト、報告内容のAND/OR検索、遅刻あり絞り込み）</li>
+                            <li>報告データの削除</li>
+                            <li>業務報告書のダウンロード（CSV）</li>
+                        </ul>
+                        <li>利用者アカウント管理</li>
+                        <ul>
+                            <li>利用者一覧のCRUD</li>
+                            <li>利用者ログイン可能時間の設定</li>
+                        </ul>
+                        <li>シフト管理</li>
+                        <ul>
+                            <li>シフトの個別編集</li>
+                            <li>シフトの一括削除</li>
+                            <li>CSVによるシフトインポート</li>
+                        </ul>
+                        <li>管理者アカウント管理</li>
+                        <ul>
+                            <li>管理者一覧のCRUD</li>
+                            <li>自身のパスワード変更</li>
+                        </ul>
+                    </ul>
+                    <li>利用者画面機能</li>
+                        <ul>
+                            <li>出勤・退勤の打刻兼業務報告</li>
+                        </ul>
+                </ul>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="sec-line"></div>
+        <p>ご連絡は求人サイトからお願い致します。</p>
+        <p>ご覧いただき、ありがとうございました。</p>
+        <p>&copy;MASAKAZU SASAKI</p>
+    </footer>
+</body>
+</html>

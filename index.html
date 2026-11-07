@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASAKAZU SASAKI's PORTFOLIO</title>
+    <link rel="icon" href="img/M.png">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="menu-frame">
+            <button
+                type="button"
+                class="c-menuButton"
+                aria-label="メニューを開く"
+                aria-controls="globalMenu"
+                aria-expanded="false"
+            >
+                <span class="c-menuButton__line"></span>
+                <span class="c-menuButton__line"></span>
+                <span class="c-menuButton__line"></span>
+            </button>
+        </div>
+        
+        <div  id="globalMenu" class="c-globalMenu menu-set" aria-hidden="true">
+            <nav class="menu c-globalMenu__list">
+                <ul class="sec-list">
+                    <li><a href="#">Top</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="c-overlay">
+            <button
+                type="button"
+                aria-label="メニューを閉じる"
+                tabindex="-1"
+            ></button>
+        </div>
+        <div class="frame">
+            <div class="top-image"><img src="img/top_image.png" alt="top-image"></div>
+            <div class="title">
+                <h1>MASAKAZU<br>SASAKI's<br>PORTFOLIO</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <button class="top-botton" onclick="location.href='#' "><div class="polygon"></div></button>
+        <section id="works">
+            <div class="title-set">
+                <h2>Works</h2>
+                <div class="line"></div>
+            </div>
+            <div class="frame">
+                <button class="item" onclick="location.href='works.html' ">
+                    <div class="item-img fadein"><img src="img/attendance_manager.png" alt="no_image"></div>
+                    <div class="text">
+                        <p>勤怠報告管理システム</p>
+                        <ul>
+                            <li>言語：PHP、HTML、CSS、Javascript</li>
+                            <li>フレームワーク：Laravel</li>
+                            <li>ホスティング：Render</li>
+                            <li>DB:PostgreSQL、MySQL</li>
+                        </ul>
+                    </div>
+                </button>
+            </div>
+        </section>
+        <section id="about">
+            <div class="title-set button-flg">
+                <h2>About</h2>
+                <div class="line"></div>
+            </div>
+            <div class="frame">
+                <div class="overview">
+                    <p>佐々木 将和</p>
+                    <p>
+                        1991年2月、兵庫県出身。大阪工業大学を卒業後、特定派遣会社でエンジニア職に従事。
+                        療養中にWebの開発に関心を持ち、2024年からPHPに興味を持ち、現在では学習としてLaravelで
+                        勤怠管理Webシステムを製作している。
+                    </p>
+                </div>
+                <div class="career-frame">
+                    <div class="career">
+                        <div class="point"></div>
+                        <p>1991年</p>
+                        <p>島根県で生まれる。</p>
+                        <p>
+                            幼いころからレゴ、プラモデルに興味を持ち、学生時代はアニメ、ゲームにはまり、イラストを
+                            よく書いていた。幼稚園児から中学生までピアノを習っていたので音楽にも興味が強かった。
+                        </p>
+                    </div>
+                    <div class="career">
+                        <div class="point"></div>
+                        <p>2009年</p>
+                        <p>大阪工業大学に入学。</p>
+                        <p>
+                            音楽、コンピュータグラフィックス(CG)に興味が強かったため情報メディア学科を専攻にした。
+                            プログラミング、ネットワーク、アルゴリズムとデータ構造など、情報技術の基礎知識と3DCG、
+                            音響、インターフェースなどメディア技術の学習も尾もなった。CGに興味があったため部活は
+                            CG部に入部し2Dイラストを描いていた、。
+                        </p>
+                    </div>
+                    <div class="career">
+                        <div class="point"></div>
+                        <p>2013年～2021年</p>
+                        <p>アウトソーシング会社を4社経験</p>
+                        <p>
+                            多様な技術を身に着けながらエンジニアとして長く働けることに魅力を感じ、
+                            アウトソーシング会社に入社。取引先と打ち合わせを重ねながら上流工程から
+                            下流工程まで開発を経験した。
+
+                        </p>
+                    </div>
+                    <div class="career">
+                        <div class="point"></div>
+                        <p>2022年～2026年</p>
+                        <p>準備期間</p>
+                        <p>
+                            家庭の事情で実家に度々戻り、手伝いをしながら、どこからでもアプリケーションのチェックが
+                            できるWeb技術に興味を持ちPHPの学習を始める。就労支援でWeb勤怠管理アプリケーション開発した。
+                            開発が中止になるが、フレームワークの学習も続け、
+                            勤怠アプリケーションをLaravelに置き換えて、機能の充実を行っていた。
+                        </p>
+                    </div>
+                    <div class="career">
+                        <div class="point"></div>
+                        <p>これから</p>
+                        <p>
+                            これまでの経験を活かし、新たに技術を身に着け続け、多くの人の意見を吸収し
+                            ユーザー目線を忘れないバランスのいいエンジニアになりたいと思います。
+                        </p>
+                    </div>
+                </div>
+                <button class="more-button" type="button" aria-expanded="false" aria-controls="more-career">
+                    ▽
+                </button>
+            </div>
+            <h3>Skills</h3>
+            <div class="skills-frame">
+                <div class="item">
+                    <div class="item-img fadein"><img src="img/C++.png" alt="c++"></div>
+                    <p>C++</p>
+                    <dl>
+                        <div class="list-set">
+                            <dt>開発期間：</dt>
+                            <dd>2年半</dd>
+                        </div>
+                        <div class="list-set">
+                            <dt>工程：</dt>
+                            <dd>基本設計～保守</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="item">
+                    <div class="item-img fadein"><img src="img/Java.png" alt="Java"></div>
+                    <p>Java</p>
+                    <dl>
+                        <div class="list-set">
+                            <dt>開発期間：</dt>
+                            <dd>3か月</dd>
+                        </div>
+                        <div class="list-set">
+                            <dt>工程：</dt>
+                            <dd>改修</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="item">
+                    <div class="item-img fadein"><img src="img/SQL.png" alt="SQL"></div>
+                    <p>Oracle SQL</p>
+                    <dl>
+                        <div class="list-set">
+                            <dt>開発期間：</dt>
+                            <dd>3か月</dd>
+                        </div>
+                        <div class="list-set">
+                            <dt>工程：</dt>
+                            <dd>改修</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="item">
+                    <div class="item-img fadein"><img src="img/PHP.png" alt="PHP"></div>
+                    <p>PHP(Laravel)</p>
+                    <dl>
+                        <div class="list-set">
+                            <dt>開発期間：</dt>
+                            <dd>1年(学習)</dd>
+                        </div>
+                        <div class="list-set">
+                            <dt>工程：</dt>
+                            <dd>開発</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="item">
+                    <div class="item-img fadein"><img src="img/JS.png" alt="JS"></div>
+                    <p>Javascript</p>
+                    <dl>
+                        <div class="list-set">
+                            <dt>開発期間：</dt>
+                            <dd>6か月(学習)</dd>
+                        </div>
+                        <div class="list-set">
+                            <dt>工程：</dt>
+                            <dd>開発</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="sec-line"></div>
+        <p>ご連絡は求人サイトからお願い致します。</p>
+        <p>ご覧いただき、ありがとうございました。</p>
+        <p>&copy;MASAKAZU SASAKI</p>
+    </footer>
+</body>
+</html>
